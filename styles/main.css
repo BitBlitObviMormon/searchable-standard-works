@@ -1,0 +1,42 @@
+/* HTML Selectors */
+body {
+    font-family: 'Kalam', cursive;
+	color: white;
+	background-color: black;
+}
+
+div, pre#content {
+    margin: 10px;
+	padding: 5px;
+	padding-left: 10px;
+	background-color: #333333;
+	max-width: 800px;
+}
+
+pre#content {
+	font-family: 'Kalam', cursive;
+	white-space: pre-wrap;
+}
+
+.bold {
+	font-weight: bold;
+	color: yellow;
+}
+
+footer {
+    background-color: gray;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+header {
+    margin: auto;
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    min-width: 120px;
+    text-align: right;
+}
