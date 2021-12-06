@@ -176,31 +176,31 @@ function search(text) {
 	book_list = [];
 	check_for_book = true;
 
-	// Cheap hack, convert dc or dnc to doctrineandcoveneants
+	// Convert dc or dnc to doctrineandcoveneants
 	if (book === "dc" || book === "dnc") {
 		book_list.push("doctrineandcovenants");
 		check_for_book = false; // We already know the book now.
 	}
 
-	// Cheap hack, convert jsm to josephsmithmatthew
+	// Convert jsm to josephsmithmatthew
 	if (book === "jsm") {
 		book_list.push("josephsmithmatthew");
 		check_for_book = false; // We already know the book now.
 	}
 
-	// Cheap hack, convert jsh to josephsmithhistory
+	// Convert jsh to josephsmithhistory
 	if (book === "jsh") {
 		book_list.push("josephsmithhistory");
 		check_for_book = false; // We already know the book now.
 	}
 
-	// Cheap hack, convert aof or af to articlesoffaith
+	// Convert aof or af to articlesoffaith
 	if (book === "aof" || book == "af") {
 		book_list.push("articlesoffaith");
 		check_for_book = false; // We already know the book now.
 	}
 
-	// Cheap hack, convert wom or wm to wordsofmormon
+	// Convert wom or wm to wordsofmormon
 	if (book === "wom" || book == "wm") {
 		book_list.push("wordsofmormon");
 		check_for_book = false; // We already know the book now.
@@ -247,7 +247,7 @@ function search(text) {
 			verse = chapverse.substring(3);
 			chapverses.push(new Array(chapter, verse));
 			break;
-		case 3: // Three combos: (12, 3); (1, 23); (123, -1)
+		case 3: // Three combos: (1, 23); (12, 3); (123, -1)
 			chapter = chapverse.substring(0, 1);
 			verse = chapverse.substring(1);
 			chapverses.push(new Array(chapter, verse));
