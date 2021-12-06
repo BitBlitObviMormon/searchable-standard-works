@@ -194,14 +194,14 @@ function search(text) {
 		check_for_book = false; // We already know the book now.
 	}
 
-	// Cheap hack, convert aof to articlesoffaith
-	if (book === "aof") {
+	// Cheap hack, convert aof or af to articlesoffaith
+	if (book === "aof" || book == "af") {
 		book_list.push("articlesoffaith");
 		check_for_book = false; // We already know the book now.
 	}
 
-	// Cheap hack, convert wom to wordsofmormon
-	if (book === "wom") {
+	// Cheap hack, convert wom or wm to wordsofmormon
+	if (book === "wom" || book == "wm") {
 		book_list.push("wordsofmormon");
 		check_for_book = false; // We already know the book now.
 	}
