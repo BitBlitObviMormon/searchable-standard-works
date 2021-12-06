@@ -113,7 +113,7 @@ function reportProgress(progress) {
 function search(text) {
 	// Return early if the string is nonexistent or too small.
 	if (text === null) return "";
-	if (text.length < 3) return "";
+	if (text.length < 2) return "";
 
 	// Clean up the text by lowering the case and removing symbols
 	text = text.toLowerCase();
