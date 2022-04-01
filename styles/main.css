@@ -1,8 +1,6 @@
 /* HTML Selectors */
 /* Small view*/
 
-
-
 body {
     font-family: 'Kalam', cursive;
     color: white;
@@ -55,6 +53,8 @@ header {
     text-align: center;
 }
 
+
+
 label {
 
     min-width: 300px;
@@ -88,7 +88,7 @@ label {
     background-color: rgb(241, 226, 89);
 }
 
-/* For Tablet Screens */
+/* For Tablet Screens (Medium)*/
 @media (min-width: 48em) {
 
     div {
@@ -104,7 +104,7 @@ label {
     }
 }
 
-/* For Large Screens */
+/* For Larger Screens (Large) */
 @media (min-width: 60em) {
 
     div {

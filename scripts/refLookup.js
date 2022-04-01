@@ -222,7 +222,7 @@ function search(text) {
 	let chapverses = [];
 	let chapter = "-1"; // -1 means empty chapter
 	let verse = "-1"; // -1 means empty verse
-	switch(chapverse.length) {
+	switch (chapverse.length) {
 		case 6: // Only one combo: (123, 456)
 			chapter = chapverse.substring(0, 3);
 			verse = chapverse.substring(3);
@@ -260,7 +260,7 @@ function search(text) {
 			chapter = chapverse.substring(0, 1);
 			verse = chapverse.substring(1);
 			chapverses.push(new Array(chapter, verse));
-			// Fall through
+		// Fall through
 		case 1: // Only one combo: (1, -1)
 			chapverses.push(new Array(chapverse, -1)); // Chapter with no verse
 			break;
@@ -271,19 +271,19 @@ function search(text) {
 	// Search all of the chapter-verse combinations for each book to determine which are possible
 	// In the format of [ {book, chapter, verse}, {book, chapter, verse} ]
 	let possible_verses = [];
-	for(b of book_list)
+	for (b of book_list)
 		for (cv of chapverses)
 			// If there are enough chapters and verses in said chapter then
 			if (scriptures[b].hasOwnProperty(cv[0]))
 				if (scriptures[b][cv[0]].hasOwnProperty(cv[1]) || cv[1] === -1)
-					possible_verses.push({"book": b, "chapter": cv[0], "verse": cv[1]}); // List the combo as possible
+					possible_verses.push({ "book": b, "chapter": cv[0], "verse": cv[1] }); // List the combo as possible
 
 	// Format the text
 	output = []; // This is our string builder
-	for(v of possible_verses) {
+	for (v of possible_verses) {
 		// Output the book and test for curious title cases
 		output.push('<span class="bold">');
-		switch(v.book) {
+		switch (v.book) {
 			case "songofsolomon":
 				output.push("Song of Solomon");
 				break;
@@ -309,7 +309,7 @@ function search(text) {
 				else
 					output.push(v.book.substring(0, 1).toUpperCase(), v.book.substring(1)); // Book:
 		}
-		
+
 		// Output the rest of the header
 		output.push(' ', v.chapter, ":</span><br>"); // chapter\n
 
@@ -336,7 +336,7 @@ function init() {
 		// Calculate the book's name
 		let iend = FILES[i].indexOf('.') + 1;
 		let book = FILES[i].substring(iend).toLowerCase().replaceAll('-', '');
-		
+
 		// Set up the HTTP request
 		let file = new XMLHttpRequest();
 		file.open("GET", PROVIDER + FILES[i], true);
@@ -388,7 +388,7 @@ function readFile(file, book) {
 // Utilizes the search function
 function parseInput() {
 	let text = search(document.getElementById("searchbar").value);
-	
+
 	if (text === "") {
 		document.getElementById("content").style.visibility = "hidden";
 	} else {
