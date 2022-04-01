@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scripture Reference</title>
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Scripture Search</h1>
+    </header>
+
+    <div class="search-input">
+        <label for="searchbar">Type a search term or reference: </label>
+        <input id="searchbar" class="searchbar" name="searchbar" type="text" placeholder="3ne123" oninput="parseInput()"
+            disabled>
+    </div>
+    <div id="content">Wait for a moment, loading...</div>
+    <script src="scripts/lib/lz-string.js"></script>
+    <!-- Downloaded from https://github.com/pieroxy/lz-string, thanks pieroxy! -->
+    <script src="scripts/search.js"></script>
+</body>
+
+</html>
