@@ -82,7 +82,9 @@ label {
 
 .highlight {
     color: black;
-    background-color: rgb(241, 226, 89);
+	background: linear-gradient(#f1e259, #f1e259) no-repeat;
+    background-position: center;
+    background-size: 100% 80%;
 }
 
 /* For Tablet Screens */
