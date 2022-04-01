@@ -1,26 +1,43 @@
 /* HTML Selectors */
+/* Small view */
 body {
     font-family: 'Kalam', cursive;
-	color: white;
-	background-color: black;
+    color: white;
+    background-color: black;
+    margin: 0 auto;
 }
 
-div, pre#content {
-    margin: 10px;
-	padding: 5px;
-	padding-left: 10px;
-	background-color: #333333;
-	max-width: 800px;
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    background-color: rgb(241, 226, 89);
+    color: #333333;
+    margin: 2rem auto;
+    padding-top: 5px;
+}
+
+div {
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #333333;
+    width: 100%;
+    max-width: 300px;
 }
 
 pre#content {
-	font-family: 'Kalam', cursive;
-	white-space: pre-wrap;
+    font-family: 'Kalam', cursive;
+    white-space: pre-wrap;
+}
+
+#content {
+    margin: 0 auto;
+    font-size: 1rem;
 }
 
 .bold {
-	font-weight: bold;
-	color: yellow;
+    font-weight: bold;
+    color: rgb(241, 226, 89);
+
 }
 
 footer {
@@ -36,7 +53,62 @@ header {
 }
 
 label {
-    display: inline-block;
-    min-width: 120px;
+
+    min-width: 300px;
     text-align: right;
+    font-size: 1.4rem;
+    margin: .5rem;
+    padding: 1rem;
+}
+
+#searchbar {
+    border-bottom: 2px solid yellow;
+    background-color: transparent;
+    color: #eee;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+
+}
+
+.searchbar {
+    margin: 0 auto;
+    width: 300px;
+    padding: 15px 2px;
+    font-size: 1.6rem;
+}
+
+
+.highlight {
+    color: black;
+    background-color: rgb(241, 226, 89);
+}
+
+/* For Tablet Screens */
+@media (min-width: 48em) {
+
+    div {
+        max-width: 760px;
+    }
+
+    #content {
+        font-size: 1.6rem;
+    }
+
+    label {
+        font-size: 2rem;
+    }
+}
+
+/* For Large Screens */
+@media (min-width: 60em) {
+
+    div {
+        max-width: 960px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
 }

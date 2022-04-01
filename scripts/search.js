@@ -347,7 +347,7 @@ function search(text, unsafe = false) {
 	let it = 0;   // The current iterator
 	let pit = 0;  // The previous iterator
 	while ((it = lcase.indexOf(ltext, it)) > -1) {
-		output.push(formatted.substring(pit, it), "<span class=\"bold\">", formatted.substring(it, it + text.length), "</span>");
+		output.push(formatted.substring(pit, it), "<span class=\"highlight\">", formatted.substring(it, it + text.length), "</span>");
 		pit = it++ + text.length;
 	}
 	output.push(formatted.substring(pit)); // Output the last bit of text
