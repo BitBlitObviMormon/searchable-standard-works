@@ -37,7 +37,6 @@ pre#content {
 .bold {
     font-weight: bold;
     color: rgb(241, 226, 89);
-
 }
 
 footer {
@@ -53,7 +52,6 @@ header {
 }
 
 label {
-
     min-width: 300px;
     text-align: right;
     font-size: 1.4rem;
@@ -61,24 +59,19 @@ label {
     padding: 1rem;
 }
 
-#searchbar {
-    border-bottom: 2px solid yellow;
-    background-color: transparent;
-    color: #eee;
+.searchbar {
     border-top: none;
     border-right: none;
     border-left: none;
+    border-bottom: 2px solid yellow;
+    background-color: transparent;
+    color: #eee;
     outline: none;
-
-}
-
-.searchbar {
     margin: 0 auto;
     width: 300px;
     padding: 15px 2px;
     font-size: 1.6rem;
 }
-
 
 .highlight {
     color: black;

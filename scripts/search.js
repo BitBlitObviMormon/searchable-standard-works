@@ -17,7 +17,7 @@ class ScriptureList {
 			});
 		});
 	}
-	
+
 	// Functions identically to forEachVerse except it takes extra time to sort it all before iterating
 	forEachVerseInOrder(func) {
 		Object.keys(this).sort().forEach((kbook, ibook) => { // Iterate through each book
@@ -299,12 +299,12 @@ function search(text, unsafe = false) {
 	if (text === null) return "";
 	if (text.length < 1) return "";
 	let ltext = text.toLowerCase();
-	
+
 	// If the text is a reference then return the reference
 	let retVal = refLookup(text);
 	if (retVal != "")
 		return retVal;
-	
+
 	// If the text was not a reference then search for instances of the word
 	let results = new ScriptureList();
 	let resultsTotal = 0;
@@ -312,7 +312,7 @@ function search(text, unsafe = false) {
 	// Go through each verse in the scriptures
 	scriptures.forEachVerse((kbook, kchapter, kverse) => {
 		let verse = scriptures[kbook][kchapter][kverse];
-		
+
 		// If the search text is found in the verse then add it to the results list
 		let pos = verse.toLowerCase().indexOf(ltext);
 		if (pos > -1) {
@@ -323,13 +323,13 @@ function search(text, unsafe = false) {
 			// Add the chapter to the references if it has not been added yet
 			if (!(kchapter in results[kbook]))
 				results[kbook][kchapter] = {};
-			
+
 			// Add the verse
 			results[kbook][kchapter][kverse] = verse;
 			resultsTotal++;
 		}
 	});
-	
+
 	// If there are a LOT of search results then skip formatting them altogether
 	let output = []; // Our stringbuilder
 	if (unsafe != true && resultsTotal > MAX_DISPLAY) {
@@ -337,7 +337,7 @@ function search(text, unsafe = false) {
 		output.push("<button type=\"button\" onclick=\"parseInput(true)\">Yes, I know what I'm doing.</button>");
 		return output.join("");
 	}
-	
+
 	// Format the results
 //	console.log(results);
 
@@ -351,7 +351,7 @@ function search(text, unsafe = false) {
 		pit = it++ + text.length;
 	}
 	output.push(formatted.substring(pit)); // Output the last bit of text
-	
+
 	return output.join("");
 }
 
@@ -378,7 +378,7 @@ function readFile(file) {
 	if (file.readyState === 4) {  // document is ready to parse.
 		if (file.status === 200) {  // file is found
 			scriptures = Object.assign(scriptures, JSON.parse(file.responseText));
-			
+
 			// Compress the data and keep it in local storage
 			reportProgress({loaded: 0.9, total: 1}) // Stall the controls, we are still "loading".
 			let data = LZString.compressToUTF16(file.responseText);
@@ -391,7 +391,7 @@ function readFile(file) {
 // Utilizes the search function
 function parseInput(unsafe = false) {
 	let text = search(document.getElementById("searchbar").value, unsafe);
-	
+
 	if (text === "") {
 		document.getElementById("content").style.visibility = "hidden";
 	} else {
