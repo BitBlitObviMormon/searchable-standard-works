@@ -1,109 +1,169 @@
 /* HTML Selectors */
 /* Small view */
 body {
-    font-family: 'Kalam', cursive;
-    color: white;
-    background-color: #0a0a0a;
-    margin: 0 auto;
+	font-family: 'Kalam', cursive;
+	color: white;
+	background-color: #0a0a0a;
+	margin: 0 auto;
 }
 
 h1 {
-    text-align: center;
-    font-size: 2rem;
-    background-color: rgb(241, 226, 89);
-    color: #333333;
-    margin: 2rem auto;
-    padding-top: 5px;
+	text-align: center;
+	font-size: 2rem;
+	background-color: rgb(241, 226, 89);
+	color: #333333;
+	margin: 2rem auto;
+	padding-top: 5px;
 }
 
 div {
-    margin: 0 auto;
-    padding: 5px;
-    background-color: #333333;
-    width: 100%;
-    max-width: 300px;
+	margin: 0 auto;
+	padding: 5px;
+	background-color: #333333;
+	width: 100%;
+	max-width: 350px;
 }
 
 pre#content {
-    font-family: 'Kalam', cursive;
-    white-space: pre-wrap;
+	font-family: 'Kalam', cursive;
+	white-space: pre-wrap;
 }
 
 #content {
-    margin: 0 auto;
-    font-size: 1rem;
+	margin: 0 auto;
+	font-size: 1rem;
+}
+
+#content button {
+	background-color: rgb(241, 226, 89);
+	color: black;
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0 auto;
+	width: 350px;
+	padding: 5px;
+	border-radius: 5px;
+	border: none;
+}
+
+#content button:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, .4);
+	color: white;
 }
 
 .bold {
-    font-weight: bold;
-    color: rgb(241, 226, 89);
+	font-weight: bold;
+	color: rgb(241, 226, 89);
 }
 
 footer {
-    background-color: gray;
-    color: white;
-    padding: 5px;
-    text-align: center;
+	background-color: gray;
+	color: white;
+	padding: 5px;
+	text-align: center;
 }
 
 header {
-    margin: auto;
-    text-align: center;
+	margin: auto;
+	text-align: center;
 }
 
 label {
-    min-width: 300px;
-    text-align: right;
-    font-size: 1.4rem;
-    margin: .5rem;
-    padding: 1rem;
+	min-width: 300px;
+	text-align: right;
+	font-size: 1.4rem;
+	margin: .5rem;
+	padding: 1rem;
+}
+
+.search-input {
+	max-width: 350px;
+	text-align: center;
 }
 
 .searchbar {
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 2px solid yellow;
-    background-color: transparent;
-    color: #eee;
-    outline: none;
-    margin: 0 auto;
-    width: 300px;
-    padding: 15px 2px;
-    font-size: 1.6rem;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 2px solid yellow;
+	background-color: transparent;
+	color: #eee;
+	outline: none;
+	margin: 0 0 1.0rem 0;
+	width: 75%;
+	font-size: 1.2rem;
+	text-align: center;
 }
 
 .highlight {
-    color: black;
+	color: black;
 	background: linear-gradient(#f1e259, #f1e259) no-repeat;
-    background-position: center;
-    background-size: 100% 80%;
+	background-position: center;
+	background-size: 100% 80%;
 }
 
-/* For Tablet Screens */
+/* For Tablet Screens (Medium)*/
 @media (min-width: 48em) {
 
-    div {
-        max-width: 760px;
-    }
+	div {
+		max-width: 760px;
+	}
 
-    #content {
-        font-size: 1.6rem;
-    }
+	#content {
+		font-size: 1.6rem;
+	}
 
-    label {
-        font-size: 2rem;
-    }
+	label {
+		font-size: 1.5rem;
+	}
+
+	.search-input {
+		max-width: 760px;
+		display: flex;
+	}
+
+	.searchbar {
+		width: 350px;
+		margin: 1.5rem auto 1.5rem 0;
+		font-size: 1.6rem;
+		text-align: left;
+	}
+
+	#content button {
+		width: 760px;
+	}
 }
 
-/* For Large Screens */
+/* For Larger Screens (Large) */
 @media (min-width: 60em) {
 
-    div {
-        max-width: 960px;
-    }
+	div {
+		width: 960px;
+	}
 
-    h1 {
-        font-size: 4rem;
-    }
+	h1 {
+		font-size: 4rem;
+	}
+
+	label {
+		font-size: 2rem;
+	}
+
+	.searchbar {
+		font-size: 1.8rem;
+	}
+
+	#content {
+		max-width: 960px;
+		font-size: 1.6rem;
+	}
+
+	.search-input {
+		max-width: 960px;
+	}
+
+	#content button {
+		width: 960px;
+	}
 }
