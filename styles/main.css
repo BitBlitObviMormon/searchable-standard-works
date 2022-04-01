@@ -46,6 +46,12 @@ pre#content {
     border: none;
 }
 
+#content button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+}
+
 .bold {
     font-weight: bold;
     color: rgb(241, 226, 89);
